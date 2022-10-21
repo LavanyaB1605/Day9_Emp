@@ -4,5 +4,7 @@ public class MainEmp extends EmpWage
         EmployeePresent();
         DailyWage();
         PartTime();
+        WagesForMonth();
     }
+
 }
