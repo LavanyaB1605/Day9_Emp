@@ -45,6 +45,24 @@ public class EmpWage {
             System.out.println("Employee Salary=" +salary);
         }
     }
+    public static void SwitchCase(){
+        switch (x) {
+            case 1:
+                empHrs=8;
+                salary=empRatePerHr * empHrs;
+                System.out.println("Employee PartTime Salary=" +salary);
+                break;
+            case 2:
+                empHrs=16;
+                salary=empRatePerHr * empHrs;
+                System.out.println("Employee FullTime Salary=" +salary);
+                break;
+            default:
+                empHrs=0;
+                salary=empRatePerHr * empHrs;
+                System.out.println("Employee Salary=" +salary);
+        }
+    }
 
 
 
