@@ -1,12 +1,14 @@
 import java.util.Random;
 
 public class EmpWage {
+    public static Random random = new Random();
     public static int isPresent = 1;
+    public static int isPartTime=1;
+    public static int isFullTime=2;
     public static int empRatePerHr = 20 ;
     public static int empHrs = 8 ;
     public static int salary;
 
-    public static Random random = new Random();
     public static int x = random.nextInt(2);
     public static void EmployeePresent(){
         //System.out.println(x);
@@ -28,6 +30,22 @@ public class EmpWage {
             System.out.println("DailyWage is " +salary);
         }
     }
+    public static void PartTime(){
+        if ( x == isPartTime ){
+            empHrs=8;
+            salary=empRatePerHr * empHrs;
+            System.out.println("Employee PartTime Salary=" +salary);
+        } else if ( x == isFullTime ) {
+            empHrs=16;
+            salary=empRatePerHr * empHrs;
+            System.out.println("Employee FullTime Salary=" +salary);
+        }else{
+            empHrs=0;
+            salary=empRatePerHr * empHrs;
+            System.out.println("Employee Salary=" +salary);
+        }
+    }
+
 
 
 }
