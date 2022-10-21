@@ -10,6 +10,7 @@ public class EmpWage {
     public static int salary;
     public static int numOfworkingDay=20;
     public static int  totalSalary=0;
+    public static int  totalEmpHr=0;
 
     public static int x = random.nextInt(2);
     public static void EmployeePresent(){
@@ -65,7 +66,7 @@ public class EmpWage {
                 System.out.println("Employee Salary=" +salary);
         }
     }
-    public static void WagesForMonth(){
+    public static void WagesForMonthAndHRS(){
         for ( int day=1; day<=numOfworkingDay; day++)
         {
             switch (x) {
@@ -80,10 +81,12 @@ public class EmpWage {
             }
             salary=empHrs*empRatePerHr;
             totalSalary=totalSalary+salary;
+            totalEmpHr=totalEmpHr+empHrs;
             System.out.println("RandomCheck= " +x);
             System.out.println("Salary= " +salary);
         }
-        System.out.println("Totalsalary= " +totalSalary);
+        System.out.println("Total salary= " +totalSalary);
+        System.out.println("Total EmpHr= " +totalEmpHr);
     }
 
 
